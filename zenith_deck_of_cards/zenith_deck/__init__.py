@@ -40,20 +40,32 @@ class Card: #class for cards, obviously
             val = 'Three'
         elif self.rank == 2:
             val = 'Two'
+        elif self.rank == 1:
+            val = 'Ace'
         self.cardname = self.cardname.format(rank = val,suit = suit)
 
 class Deck:
-    def __init__(self): #creates all cards and appends them to cardslist
+    def __init__(self,ace_low=False): #creates all cards and appends them to cardslist
         self.player_hands = {}
         self.cardslist = []
-        self.AoD = Card('D',14)
-        self.cardslist.append(self.AoD)
-        self.AoH = Card('H',14)
-        self.cardslist.append(self.AoH)
-        self.AoS = Card('S',14)
-        self.cardslist.append(self.AoS)
-        self.AoC = Card('C',14)
-        self.cardslist.append(self.AoC)
+        if ace_low is False:
+            self.AoD = Card('D',14)
+            self.cardslist.append(self.AoD)
+            self.AoH = Card('H',14)
+            self.cardslist.append(self.AoH)
+            self.AoS = Card('S',14)
+            self.cardslist.append(self.AoS)
+            self.AoC = Card('C',14)
+            self.cardslist.append(self.AoC)
+        else:
+            self.AoD = Card('D',1)
+            self.cardslist.append(self.AoD)
+            self.AoH = Card('H',1)
+            self.cardslist.append(self.AoH)
+            self.AoS = Card('S',1)
+            self.cardslist.append(self.AoS)
+            self.AoC = Card('C',1)
+            self.cardslist.append(self.AoC)            
         self.KoD = Card('D',13)
         self.cardslist.append(self.KoD)
         self.KoH = Card('H',13)
@@ -174,8 +186,3 @@ class Deck:
             else:
                 end = ', '
             print(card.cardname,end=end)
-
-#Old Tests
-#deck = Deck()
-#deck.deal_player_hands(2,2)
-#deck.print_player_hand(1)
