@@ -6,4 +6,5 @@ setup(
     version="1.0.1",
     description="Deck and card classes",
     packages=["zenith_deck"],
+    url="https://github.com/Zenith4/Zenith-Deck-of-Cards",    
 )
