@@ -8,6 +8,7 @@ setup(
     description="Deck and card classes",
     long_description=README,
     long_descrption_content_type="text/markdown",
+    author="Zenith4",
     packages=["zenith_deck"],
     url="https://github.com/Zenith4/Zenith-Deck-of-Cards",    
 )
