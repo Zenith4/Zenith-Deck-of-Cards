@@ -2,11 +2,9 @@ Import like this:
 ```py
 from zenith_deck import deck
 ```
-Or, for the (unfinished) version with custom debug messages:
-
-<sub><sup>way to go, I made a module with no code in it</sub></sup>
+Or, if you can make a better deck than me and just want the card class:
 ```py
-from zenith_deck import debug_deck
+from zenith_deck import card
 ```
 Source Code:
 https://github.com/Zenith4/Zenith-Deck-of-Cards
