@@ -2,7 +2,9 @@ Import like this:
 ```py
 from zenith_deck import deck
 ```
-Or, for the version with custom debug messages:
+Or, for the (unfinished) version with custom debug messages:
+
+<sub><sup>way to go, I made a module with no code in it</sub></sup>
 ```py
 from zenith_deck import debug_deck
 ```
