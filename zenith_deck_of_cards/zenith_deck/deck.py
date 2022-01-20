@@ -4,7 +4,7 @@ class Card: #class for cards, obviously
         self.suit = suit 
         self.rank = rank
         self.create_cardname()
-    def create_cardname(self,joker_suit1='Red',joker_suit2='Black',joker_rank='Joker'): #creates a name to be printed out, e.g "King of Clubs" and stores it in the attribute cardname
+    def create_cardname(self,joker_suit_1='Red',joker_suit_2='Black',joker_rank='Joker'): #creates a name to be printed out, e.g "King of Clubs" and stores it in the attribute cardname
         self.cardname = '{rank} of {suit}'
         if self.suit == 'D':
             suit = 'Diamonds'
@@ -42,13 +42,14 @@ class Card: #class for cards, obviously
             val = 'Two'
         elif self.rank == 1:
             val = 'Ace'
-        elif self.suit == joker_suit1:
-            self.cardname = '{joker_suit1} {joker_rank}'.format(joker_suit1=joker_suit1,joker_rank=joker_rank)
+        elif self.suit == joker_suit_1:
+            self.cardname = '{joker_suit1} {joker_rank}'.format(joker_suit1=joker_suit_1,joker_rank=joker_rank)
             return
-        elif self.suit == joker_suit2:
-            self.cardname = '{joker_suit2} {joker_rank}'.format(joker_suit2=joker_suit2,joker_rank=joker_rank)
+        elif self.suit == joker_suit_2:
+            self.cardname = '{joker_suit2} {joker_rank}'.format(joker_suit2=joker_suit_2,joker_rank=joker_rank)
             return
-        self.cardname = self.cardname.format(rank = val,suit = suit)
+        if self.cardname != '{rank} of {suit}':    
+          self.cardname = self.cardname.format(rank = val,suit = suit)
 
 class Deck:
     def __init__(self,ace_low=False,jokers=False,joker_suit1='Red',joker_suit2='Black',joker_name='Joker'): #creates all cards and appends them to cardslist
@@ -74,7 +75,9 @@ class Deck:
             self.cardslist.append(self.AoC)
         if jokers is True:
             self.J1 = Card(joker_suit1,joker_name)
+            self.J1.create_cardname(joker_suit_1=joker_suit1,joker_rank=joker_name)
             self.J2 = Card(joker_suit2,joker_name)
+            self.J2.create_cardname(joker_suit_2=joker_suit2,joker_rank=joker_name)
         self.KoD = Card('D',13)
         self.cardslist.append(self.KoD)
         self.KoH = Card('H',13)
