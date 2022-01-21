@@ -2,7 +2,7 @@ Import like this:
 ```py
 import zenith_deck
 ```
-Or, if you can make a better deck than me and just want the card class:
+Or, if you just want the card class:
 ```py
 from zenith_deck import Card
 ```
