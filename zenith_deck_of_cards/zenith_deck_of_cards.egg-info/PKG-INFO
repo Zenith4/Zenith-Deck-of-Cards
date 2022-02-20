@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: zenith-deck-of-cards
+Version: 1.2.5
+Summary: Deck and card classes
+Home-page: https://github.com/Zenith4/Zenith-Deck-of-Cards
+Author: Zenith4
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+Import like this:  
+```py
+import zenith_deck  
+```  
+Source Code:  
+https://github.com/Zenith4/Zenith-Deck-of-Cards  
+Documentation:  
+Nonexistent (As of now)           
+        
+
+
